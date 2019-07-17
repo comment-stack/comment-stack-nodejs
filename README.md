@@ -19,7 +19,8 @@ As any API REST, you will need a client to make use of this task manager.
 
 For every other route you will need to login and send the authentication token within the Authentication header:
 `Authentication: Bearer {token}`
-
+## Listing all the comments (page size of 10)
+`GET: localhost:3000/feed?page=1`
 ## Listing your comments
 `GET: localhost:3000/comments`
 ## Posting a comment
