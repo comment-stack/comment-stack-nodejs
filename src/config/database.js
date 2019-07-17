@@ -1,3 +1,5 @@
+require('dotenv/config');
+
 const config = {
   dialect: process.env.DATABASE_DIALECT,
   define: {
