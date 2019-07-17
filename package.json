@@ -8,9 +8,14 @@
     "dev": "nodemon src/server.js",
     "migrate": "dotenv sequelize db:migrate",
     "migrateback": "dotenv sequelize db:migrate:undo",
-    "fix": "eslint --fix src --ext .js"
+    "fix": "eslint --fix src --ext .js",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/server.js"
   },
   "dependencies": {
+    "babel-preset-env": "^1.7.0",
     "bcryptjs": "^2.4.3",
     "date-fns": "^2.0.0-beta.2",
     "dotenv": "^8.0.0",
@@ -26,6 +31,8 @@
     "yup": "^0.27.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "dotenv-cli": "^2.0.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
