@@ -36,7 +36,12 @@ For every other route you will need to login and send the authentication token w
 `body: { "comment_id": 1}`
 ## Update an existing user's password
 `POST: localhost:3000/users`
-`body: { "password": "87654321", "confirmPassword": "87654321","oldPassword": "12345678" }`
+```js 
+body: { 
+  "password": "87654321", 
+  "confirmPassword": "87654321",
+  "oldPassword": "12345678" 
+}```
 
 # Configuration
 ### For Development
